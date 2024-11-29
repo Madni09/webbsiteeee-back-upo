@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madni Vhora</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Glass Morphing Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#labs">Labs</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#social">Social</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <div id="home" class="section">
+        <h1>You are Very Welcome here!</h1>
+        <p>Madni is working on this project, stay tuned because it will be live very soon...</p>
+    </div>
+
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <ul>
+            {% for project in data.projects %}
+                <li>{{ project }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="labs" class="section">
+        <h2>Labs</h2>
+        <ul>
+            {% for lab in data.labs %}
+                <li>{{ lab }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am Madni and I like to learn about technology from the bottom of my heart!
+            You'll always find me curious regarding Network Security and Python. 
+        </p>
+    </div>
+
+
+    <div id="social" class="section"> <!--THis section is with images -->
+        <h2>Social Links</h2>
+        <ul>
+            {% for name, link in data.social_links.items() %}
+                <li>
+                    <a href="{{ link }}" target="_blank">
+                        <img src="{{ url_for('static', filename=name|lower + '.png') }}" alt="{{ name }}" width="50" height="50">
+                        {{ name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+         
+    <!--<div id="social" class="section">
+        <h2>Social Links</h2>
+        <ul>
+            {% for name, link in data.social_links.items() %}
+                <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div> -->
+</body>
+</html>
+

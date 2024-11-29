@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.8; /* Improved line height for readability */
+    background: linear-gradient(to right, #f6d365, #fda085);
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+}
+
+/* Glass Morphing Navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    width: 50%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff5722; /* Enhanced hover effect */
+    text-decoration: underline; /* Subtle underline on hover */
+}
+
+/* Section Lists */
+.section ul {
+    padding-left: 20px; /* Reduced padding-left for list markers */
+    list-style-position: inside; /* Aligns bullets closer to the text */
+}
+
+.section li {
+    margin: 5px 0; /* Consistent spacing between items */
+}
+
+.section p {
+    margin: 10px 0;
+    line-height: 1.6; /* Better readability for paragraphs */
+}
+
+html { /* a code for smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+.navbar a.active { /* Navbar Highlighting: Add an "active" class style for the navbar links
+    BUt AA TO JAVA SCRIPT MATE CHHE MADNIII*/
+
+    color: #ff5722;
+    text-decoration: underline;
+}
+
+
+
+
+/* Social Section Styling */
+#social ul {
+    display: flex; /* Makes the list horizontal */
+    justify-content: center; /* Centers the items */
+    padding: 0; /* Removes padding from the list */
+    list-style: none; /* Removes markers (bullets) */
+}
+
+#social li {
+    margin: 0 10px; /* Adds spacing between the social icons */
+}
+
+#social a {
+    display: flex; /* Ensures proper alignment of text and icons */
+    align-items: center;
+    text-decoration: none; /* Removes underline */
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#social a:hover {
+    color: #ff5722; /* Enhanced hover effect */
+}
+
+#social img {
+    margin-right: 5px; /* Adjust spacing between the icon and text */
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+
+
+
